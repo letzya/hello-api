@@ -17,7 +17,7 @@ class HelloRequest(BaseModel):
     entity: str
 
 # GET request handler
-@app.get("/internal", tags=[internal])
+@app.get("/internal", tags=[])
 async def read_hello():
     return {"message": "This is internal Endpoint"}
 
