@@ -5,8 +5,7 @@ from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel
 
 servers = [
-    {"url": "https://api.example.com"},
-    {"url": "https://api.staging.example.com"},
+    {"url": "http://127.0.0.1:8000"},
 ]
 
 app = FastAPI(openapi_extra={"servers": servers})
@@ -17,7 +16,7 @@ class HelloRequest(BaseModel):
     entity: str
 
 # GET request handler
-@app.get("/internal", tags=[internal])
+@app.get("/internal", tags=[])
 async def read_hello():
     return {"message": "This is internal Endpoint"}
 
