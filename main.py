@@ -3,6 +3,7 @@ import json
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel
+import uuid
 
 servers = [
     {"url": "http://127.0.0.1:8000"},
@@ -29,6 +30,12 @@ async def read_hello():
 @app.post("/hello")
 async def create_hello(request_data: HelloRequest):
     return {"message": f"Hello {request_data.entity}"}
+
+# GET request handler for generating random UUID
+@app.get("/uuid")
+async def generate_uuid():
+    random_uuid = str(uuid.uuid4())  # Generate a random UUID
+    return {"uuid": random_uuid}
 
 def custom_openapi():
     if app.openapi_schema:
