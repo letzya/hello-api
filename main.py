@@ -18,7 +18,7 @@ class HelloRequest(BaseModel):
 # GET request handler
 @app.get("/internal", tags=[])
 async def read_hello():
-    return {"message": "This is internal Endpoint "}
+    return {"message": "This is internal Endpoint and not exposed in OpenAPI"}
 
 # GET request handler
 @app.get("/hello")
