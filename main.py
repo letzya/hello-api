@@ -11,6 +11,7 @@ servers = [
 
 app = FastAPI(openapi_extra={"servers": servers})
 internal = "internal"
+random = str(uuid.uuid4())
 
 # Define a Pydantic model for payload validation
 class HelloRequest(BaseModel):
@@ -22,7 +23,7 @@ async def read_hello():
     return {"message": "This is internal Endpoint"}
 
 # GET request handler
-@app.get("/hello")
+@app.get("/hello", tags=[random])
 async def read_hello():
     return {"message": "Hello World"}
 
