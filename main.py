@@ -23,7 +23,7 @@ async def read_hello():
     return {"message": "This is internal Endpoint"}
 
 # GET request handler
-@app.get("/hello", tags=[random])
+@app.get("/hello", tags=[])
 async def read_hello():
     return {"message": "Hello World"}
 
