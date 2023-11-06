@@ -18,7 +18,7 @@ class HelloRequest(BaseModel):
     entity: str
 
 # GET request handler
-@app.get("/internal", tags=[internal])
+@app.get("/internal", tags=[])
 async def read_hello():
     return {"message": "This is internal Endpoint"}
 
@@ -71,7 +71,7 @@ app.openapi = custom_openapi
 
 def generate_openapi_json():
     openapi_schema = app.openapi()
-    with open("../oas/my-api-v2.oas.json", "w") as file:
+    with open("../oas/my-api.oas.json", "w") as file:
         json.dump(openapi_schema, file, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
