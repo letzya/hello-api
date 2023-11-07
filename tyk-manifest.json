@@ -2,7 +2,9 @@
   "my-api.oas": {
     "api_id": "apione",
     "params": {
-      "listenPath": "/demo"
+      "listenPath": "/demo",
+      "allowList": true,
+      "validateRequest": true
     }
   }
 }
