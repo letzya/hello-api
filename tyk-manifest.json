@@ -1,5 +1,8 @@
 {
   "my-api.oas": {
-    "api_id": "apione"
+    "api_id": "apione",
+    "params": {
+      "listenPath": "/demo"
+    }
   }
 }
