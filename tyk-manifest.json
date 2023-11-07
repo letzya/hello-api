@@ -1,3 +1,5 @@
 {
-  "my-api.oas": {}
+  "my-api.oas": {
+    "api_id": "apione"
+  }
 }
