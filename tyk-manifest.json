@@ -1,0 +1,24 @@
+{
+  "my-api-v2.oas": {
+    "api_id": "prctv2",
+    "params": {
+      "listenPath": "/demo3",
+      "validateRequest": true,
+      "allowList": true
+    }
+  },
+  "my-api.oas": {
+    "api_id": "prct",
+    "params": {
+      "listenPath": "/demo",
+      "validateRequest": true,
+      "allowList": true
+    }
+  },
+  "my-api-two.oas": {
+    "api_id": "laurentiu",
+    "params": {
+      "listenPath": "/laurentiu"
+    }
+  }
+}
