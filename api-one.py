@@ -18,9 +18,9 @@ class HelloRequest(BaseModel):
     entity: str
 
 # GET request handler
-@app.get("/internal", tags=[])
-async def read_hello():
-    return {"message": "This is internal Endpoint"}
+# @app.get("/internal", tags=[])
+# async def read_hello():
+#     return {"message": "This is internal Endpoint"}
 
 # GET request handler
 @app.get("/hello", tags=[random])
@@ -33,10 +33,10 @@ async def create_hello(request_data: HelloRequest):
     return {"message": f"Hello {request_data.entity}"}
 
 # GET request handler for generating random UUID
-@app.get("/uuid")
-async def generate_uuid():
-    random_uuid = str(uuid.uuid4())  # Generate a random UUID
-    return {"uuid": random_uuid}
+# @app.get("/uuid")
+# async def generate_uuid():
+#     random_uuid = str(uuid.uuid4())  # Generate a random UUID
+#     return {"uuid": random_uuid}
 
 def custom_openapi():
     if app.openapi_schema:
