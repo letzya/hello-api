@@ -5,13 +5,13 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/hello": {
+        "/ping": {
             "get": {
                 "tags": [
-                    "0c685771-292a-46b6-a99f-1a7c14c55de0"
+                    "7a28543d-3144-4a12-be22-8f7af1b4c271"
                 ],
                 "summary": "Read Hello",
-                "operationId": "read_hello_hello_get",
+                "operationId": "read_hello_ping_get",
                 "responses": {
                     "200": {
                         "description": "Successful Response",
@@ -22,7 +22,9 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/hello": {
             "post": {
                 "summary": "Create Hello",
                 "operationId": "create_hello_hello_post",
@@ -52,6 +54,22 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/HTTPValidationError"
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/uuid": {
+            "get": {
+                "summary": "Generate Uuid",
+                "operationId": "generate_uuid_uuid_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
                             }
                         }
                     }
