@@ -8,7 +8,7 @@
         "/ping": {
             "get": {
                 "tags": [
-                    "8c1d64f5-85e1-4e59-af31-846b20a9e714"
+                    "d3720b15-24e0-4b70-8033-406bc3e3c2f0"
                 ],
                 "summary": "Read Hello",
                 "operationId": "read_hello_ping_get",

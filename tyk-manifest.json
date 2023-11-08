@@ -8,5 +8,11 @@
       "allowList": true,
       "validateRequest": true
     }
+  },
+  "my-api-two.oas": {
+    "api_id": "carlos",
+    "params": {
+      "listenPath": "/demo"
+    }
   }
 }
