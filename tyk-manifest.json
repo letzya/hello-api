@@ -1,13 +1,5 @@
 {
   "my-api.oas": {
-    "api_id": "apitwo",
-    "params": {
-      "base_api_id": "apione",
-      "base-api_version_name": "v1",
-      "new_version_name": "v2",
-      "listenPath": "/demo-v2",
-      "allowList": true,
-      "validateRequest": true
-    }
+    "api_id": "apione"
   }
 }
